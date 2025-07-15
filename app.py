@@ -1,15 +1,26 @@
 #import turtle model
 
 import turtle
+# مكتبة لرسم الأشكال.
+
+
 wind = turtle.Screen()  #intialize screen 
+# بتعمل نافذة باسم wind زي background سودا كدا للعبه 
+
+
 wind.title("ping pong ")  #set the title of the game
 wind.bgcolor("black")  #make the color of the screen is black
 wind.setup(width=800, height=600)   #make standered width and height to the windew 
 wind.tracer(0)   #dont repeat the update until i ask 
-
+# ما تحدثليش الشاشة تلقائي، استنى لما أنا أقولك أعمل update()
 
 #madrab1    
 madrab1 = turtle.Turtle() 
+# دي دالة جوّه مكتبة turtle
+#بتستخدمها لما تحب تنشئ كائن جديد تقدر تتحكم فيه وترسم بيه.
+
+# صفاته
+
 madrab1.speed(0)  
 madrab1.shape("square")  
 madrab1.color("blue")
@@ -19,6 +30,8 @@ madrab1.shapesize(stretch_wid=5, stretch_len=1)
 
 
 #madrab2
+
+# ضفات بردو
 
 madrab2 = turtle.Turtle()
 madrab2.speed(0)
@@ -35,9 +48,13 @@ ball.speed(0)
 ball.shape("square")
 ball.color("white")
 ball.penup()
+# ما ترسمش خطوط.
 ball.goto(0,0)
+# حط الكورة في النص تمامًا.
 ball.dx = .5
 ball.dy = .5 
+# يعني الكورة هتبدأ تتحرك في اتجاه مائل، ونزود موقعها كل فريم.
+
 
 
 
@@ -55,28 +72,28 @@ score.write("player 1: 0 player 2: 0" , align= "center", font=("Courier",24, "no
 #functions 
 def madrab1_up():
     y = madrab1.ycor()  #get the y coordinate of the madrab1 
-    y +=20   #increase be 20
+    y +=30   #increase be 20
     madrab1.sety(y)  #set the new coordinate of y 
     
     
     
 def madrab1_down():
     y = madrab1.ycor()
-    y -=20
+    y -=30
     madrab1.sety(y)    
 
 
 
 def madrab2_up():
     y = madrab2.ycor()
-    y +=20
+    y +=30
     madrab2.sety(y)
     
     
     
 def madrab2_down():
     y = madrab2.ycor()
-    y -=20
+    y -=30
     madrab2.sety(y)    
 
 
@@ -127,9 +144,6 @@ while True:
         score2+=1
         score.clear()
         score.write("player 1: {} player 2: {}" .format(score1,score2) , align= "center", font=("Courier",24, "normal" ) )
-
-
-
 
 
 
